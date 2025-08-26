@@ -1,0 +1,18 @@
+import os
+
+os.system('powershell "winget install --id Microsoft.WindowsTerminal -e"')
+os.system('powershell "winget install Git.Git"')
+os.system('powershell "winget install --id=Microsoft.PowerToys -e"')
+os.system('powershell "winget install --id=GitHub.GitHubDesktop -e"')
+os.system('powershell "winget install JanDeDobbeleer.OhMyPosh --source winget --scope user --force"')
+os.system('powershell "cd $HOME"')
+os.system('powershell "mkdir home"')
+os.system('powershell "cd home"')
+os.system('powershell "mkdir workspace"')
+os.system('powershell "git clone https://github.com/Ruunah/dotfiles .config"')
+os.system('powershell "git clone https://github.com/Ruunah/programs .programs"')
+os.system('powershell "mv .config/term_windows/WindowsPowerShell $HOME/Documents"')
+os.system('powershell "mv .config/term_windows/settings.json $HOME/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"')
+os.system('powershell "mv .config/nvim $HOME/AppData/Local"')
+os.system('powershell "cd $HOME/AppData/Local/nvim/"')
+os.system("""powershell "git clone https://github.com/wbthomason/packer.nvim '$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim'" """)
